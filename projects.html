@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>프로젝트</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <!-- 헤더 영역 -->
+    <div id="header"></div>
+
+    <!-- 페이지별 콘텐츠 -->
+    <section>
+        <h2>프로젝트 목록</h2>
+        <ul>
+          <li>프로젝트 1: 웹 사이트 제작(현재 사이트)</li>
+          <li>프로젝트 2: 모바일 앱 개발(예정)</li>
+          <li>프로젝트 3: 데이터 분석(예정)</li>
+        </ul>
+      </section>
+  
+    <!-- 푸터 영역 -->
+    <div id="footer"></div>
+  
+    <!-- JavaScript로 헤더와 푸터 로드 -->
+    <script>
+      // 헤더 로드
+      fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('header').innerHTML = data;
+        });
+  
+      // 푸터 로드
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer').innerHTML = data;
+        });
+    </script>
+</body>
+</html>

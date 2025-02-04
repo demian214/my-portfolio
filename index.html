@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>내 포트폴리오</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <!-- 헤더 영역 -->
+  <div id="header"></div>
+
+  <!-- 페이지별 콘텐츠 -->
+  <section>
+    <h2>소개</h2>
+    <p>저는 웹 개발자입니다. 제 포트폴리오에 오신 것을 환영합니다!</p>
+  </section>
+
+  <!-- 푸터 영역 -->
+  <div id="footer"></div>
+
+  <!-- JavaScript로 헤더와 푸터 로드 -->
+  <script>
+    // 헤더 로드
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header').innerHTML = data;
+      });
+
+    // 푸터 로드
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      });
+  </script>
+</body>
+</html>

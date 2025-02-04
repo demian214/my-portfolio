@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>연락처</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <!-- 헤더 영역 -->
+    <div id="header"></div>
+
+    <!-- 페이지별 콘텐츠 -->
+    <section>
+        <h2>연락처 폼</h2>
+        <form action="#" method="post">
+          <label for="name">이름:</label>
+          <input type="text" id="name" name="name" required>
+          <br>
+          <label for="email">이메일:</label>
+          <input type="email" id="email" name="email" required>
+          <br>
+          <label for="message">메시지:</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+          <br>
+          <button type="submit">보내기</button>
+        </form>
+      </section>
+  
+    <!-- 푸터 영역 -->
+    <div id="footer"></div>
+  
+    <!-- JavaScript로 헤더와 푸터 로드 -->
+    <script>
+      // 헤더 로드
+      fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('header').innerHTML = data;
+        });
+  
+      // 푸터 로드
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer').innerHTML = data;
+        });
+    </script>
+</body>
+</html>
